@@ -1,6 +1,11 @@
 function secondMatchesAmy(array) {
-  if ( ) {
-    return "Second index matched!";
+  if( array[1] == 'Amy') {
+   return "Second index matched!";
   }
-  return "Second index not matched";
+  else{
+      return "Second index not matched";
+  }
 }
+var input = ["Happy", "Amy", "Dani"];
+//secondMathchesAmy(input);
+console.log(secondMatchesAmy(input));

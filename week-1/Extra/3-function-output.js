@@ -1,17 +1,25 @@
 // Add comments to explain what this function does. You're meant to use Google!
 function getNumber() {
-  return Math.random() * 10;
+  return Math.random() * 10;  //function that is used to return a number rounded to the nearest integer value
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
 function s(w1, w2) {
-  return w1.concat(w2);
+  return w1.concat(w2);   //its concatinate two words
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
+   const case_1_work = firstWord.concat(" "+secondWord).concat(" "+thirdWord);
+   return case_1_work;
+}
+console.log(concatenate('code', 'your', 'future'));
+console.log(concatenate('I', 'like', 'pizza'));
+console.log(concatenate('I', 'am', 13));
+
+
   // Write the body of this function to concatenate three words together.
   // Look at the test case below to understand what this function is expected to return.
-}
+
 
 /* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.

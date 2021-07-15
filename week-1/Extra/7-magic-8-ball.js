@@ -7,7 +7,7 @@ There are a few steps to being able view the future though:
 * Ask a question
 * Shake the ball
 * Get an answer
-* Decide if it's positive or negative
+* Decide if it's positive or negative                                     
 
 The question can be anything, but the answers are fixed,
 and have different levels of positivity or negativity.
@@ -42,10 +42,42 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
+const veryPositiveAnswers = ["It is certain.", "It is decidedly so.", "Without a doubt", "Yes - definitely.", "You may rely on it."];
+const positiveAnswers = ["As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes."];
+const negativeAnswers = ["Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again."];
+const veryNegative = ["Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
+const allAnswers = veryPositiveAnswers.concat(positiveAnswers, negativeAnswers, veryNegative);
+console.log(allAnswers);
 
+function shakeBall() {
+    console.log("The ball has shaken!");
+    const answer = allAnswers[Math.floor(Math.random() * allAnswers.length)];
+    return answer;
+}
+console.log(shakeBall());
+
+// This function should say whether the answer it is given is
+// - very positive
+// - positive
+// - negative
+// - very negative
+// This function should expect to be called with any value which was returned by the shakeBall function.
+function checkAnswer(answer) {
+    if (veryPositiveAnswers.includes(answer)) {
+        return "very positive";
+    } else if (positiveAnswers.indexOf(answer) > -1) {
+        return "positive";
+    } else if (negativeAnswers.indexOf(answer) > -1) {
+        return "negative";
+    } else {
+        return "very negative"
+    }
+}
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {
+/*function shakeBall() {
+  var result = "he ball has shaken!" ;
+  return result ;
 }
 
 // This function should say whether the answer it is given is
@@ -55,6 +87,11 @@ function shakeBall() {
 // - very negative
 // This function should expect to be called with any value which was returned by the shakeBall function.
 function checkAnswer(answer) {
+  if(answer  == "Outlook not so good." || answer == "Don't count on it."){
+    return "very positive";
+
+  } 
+
 }
 
 /* ======= TESTS - DO NOT MODIFY =====

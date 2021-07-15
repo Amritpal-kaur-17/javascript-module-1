@@ -7,8 +7,15 @@
 
 */
 
-function studentPassed(grade) {
 
+function studentPassed(grade) {
+  if(grade<50){
+    var result = "failed"
+  }else 
+  {
+    result = "passed";
+  }
+  return result;
 }
 
 /* 

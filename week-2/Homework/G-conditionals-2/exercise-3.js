@@ -9,8 +9,22 @@
 */
 
 function calculateGrade(mark) {
+  if(mark>= 80){
+    var result = "A";
+    return result;
+  }else if(mark<80 && mark > 60){
+    var result1 = "B";
+    return result1;
+  }else if(mark <=60 || mark >=50){
+    var result2 = "C";
+    return result2;
+  }else {
+    var result3 = "F";
+    return result3;
+  }
 
 }
+
 
 /* 
 DO NOT EDIT BELOW THIS LINE
